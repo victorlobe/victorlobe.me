@@ -44,7 +44,7 @@ body {
     font-weight: bold;
     font-size: 12px;
     color: rgb(255, 255, 255);
-    text-shadow: rgba(0, 0, 0, 0.597656) 0px -1px 0px;
+    text-shadow: rgba(0, 0, 0, 0.59375) 0px -1px 0px;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -64,7 +64,7 @@ body {
     font-weight: bold;
     font-size: 12px;
     color: rgb(255, 255, 255);
-    text-shadow: rgba(0, 0, 0, 0.597656) 0px -1px 0px;
+    text-shadow: rgba(0, 0, 0, 0.59375) 0px -1px 0px;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -86,7 +86,7 @@ body {
     font-size: 12px;
     color: rgb(255, 255, 255);
     text-align: center;
-    text-shadow: rgba(0, 0, 0, 0.597656) 0px -1px 0px;
+    text-shadow: rgba(0, 0, 0, 0.59375) 0px -1px 0px;
     text-overflow: ellipsis;
     width: 36px;
     height: 36px;
@@ -105,7 +105,7 @@ body {
     font-size: 12px;
     color: rgb(255, 255, 255);
     text-align: center;
-    text-shadow: rgba(0, 0, 0, 0.597656) 0px -1px 0px;
+    text-shadow: rgba(0, 0, 0, 0.59375) 0px -1px 0px;
     text-overflow: ellipsis;
     width: 36px;
     height: 36px;
@@ -127,7 +127,7 @@ body {
     display: block;
     -webkit-margin-top-collapse: separate;
     -webkit-margin-bottom-collapse: separate;
-    margin-left: 105px;
+    margin-left: 97px;
     margin-top: 0px;
 }
 
@@ -137,7 +137,7 @@ body {
     font-size: 12px;
     color: rgb(255, 255, 255);
     text-align: center;
-    text-shadow: rgba(0, 0, 0, 0.597656) 0px -1px 0px;
+    text-shadow: rgba(0, 0, 0, 0.59375) 0px -1px 0px;
     text-overflow: ellipsis;
     width: 36px;
     height: 36px;
@@ -174,7 +174,7 @@ body {
     font-size: 12px;
     color: rgb(255, 255, 255);
     text-align: center;
-    text-shadow: rgba(0, 0, 0, 0.597656) 0px -1px 0px;
+    text-shadow: rgba(0, 0, 0, 0.59375) 0px -1px 0px;
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 80px;
@@ -185,7 +185,7 @@ body {
     position: relative;
     -webkit-margin-top-collapse: separate;
     -webkit-margin-bottom-collapse: separate;
-    margin-left: 55px;
+    margin-left: 47px;
 }
 
 #backButton {
@@ -193,7 +193,7 @@ body {
     font-weight: bold;
     font-size: 12px;
     color: rgb(255, 255, 255);
-    text-shadow: rgba(0, 0, 0, 0.597656) 0px -1px 0px;
+    text-shadow: rgba(0, 0, 0, 0.59375) 0px -1px 0px;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -264,4 +264,212 @@ body {
     -webkit-margin-top-collapse: separate;
     -webkit-margin-bottom-collapse: separate;
     margin-left: 40px;
+}
+
+#browser {
+    height: auto;
+    width: auto;
+    position: relative;
+    margin-right: 0px;
+    margin-left: 0px;
+    min-height: 144px;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+}
+
+#div2 {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 44px;
+    width: auto;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.597656) 0px -1px 0px;
+    font-size: 16pt;
+    -webkit-border-image: url(Parts/Images/div2.png) 0 1 fill stretch;
+    border-width: 0px 1px;
+}
+
+.div3_template {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.597656) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    width: 70px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    top: 7px;
+    left: 5px;
+}
+
+#div4 {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#view1 {
+    width: 100%;
+    min-height: 100px;
+    display: none;
+    position: relative;
+}
+
+#view2 {
+    width: 100%;
+    min-height: 100px;
+    display: none;
+    position: relative;
+}
+
+#list {
+    overflow: hidden;
+    display: none;
+    padding: 0px;
+    margin: 16px 9px 17px;
+    background-color: white;
+    -webkit-margin-bottom-collapse: separate;
+    border: 1px solid rgb(172, 172, 172);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    cursor: default;
+    -webkit-user-select: none;
+    width: auto;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+}
+
+.listRowTemplate_template {
+    position: relative;
+    list-style-type: none;
+    height: 43px;
+    width: auto;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border: 0px solid rgb(172, 172, 172);
+}
+
+.label_template {
+    position: absolute;
+    left: 9px;
+    top: 11px;
+    right: 30px;
+    width: auto;
+    color: black;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.arrow_template {
+    position: absolute;
+    width: 8px;
+    height: 13px;
+    right: 10px;
+    top: 15px;
+    background-image: url(../Images/chevron.png);
+    background-repeat: no-repeat no-repeat;
+}
+
+.listRowTemplate_template .DC_selectionBG {
+    background-image: url(../Images/selectedRowiPhone.png);
+    background-color: rgb(38, 127, 239);
+    -webkit-background-size: 100%;
+    background-position: initial initial;
+    background-repeat: initial initial;
+}
+
+.listRowTemplate_template.selected .label_template {
+    color: white;
+}
+
+.listRowTemplate_template.selected .arrow_template {
+    background-image: url(../Images/chevron_white.png);
+}
+
+#list1 {
+    background-color: white;
+    overflow: hidden;
+    display: none;
+    padding: 0px;
+    margin: 0px;
+    width: auto;
+    cursor: default;
+    -webkit-user-select: none;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+}
+
+.listRowTemplate1_template {
+    position: relative;
+    list-style-type: none;
+    height: 47px;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(224, 224, 224);
+}
+
+.label1_template {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    height: 22px;
+    right: 30px;
+    width: auto;
+    color: black;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.arrow1_template {
+    position: absolute;
+    width: 8px;
+    height: 13px;
+    right: 11px;
+    top: 17px;
+    background-image: url(../Images/chevron.png);
+    background-repeat: no-repeat no-repeat;
+}
+
+.listRowTemplate1_template .DC_selectionBG {
+    background-image: url(../Images/selectedRowiPhone.png);
+    background-color: rgb(38, 127, 239);
+    -webkit-background-size: 100%;
+    background-position: initial initial;
+    background-repeat: initial initial;
+}
+
+.listRowTemplate1_template.selected .label1_template {
+    color: white;
+}
+
+.listRowTemplate1_template.selected .arrow1_template {
+    background-image: url(../Images/chevron_white.png);
 }
