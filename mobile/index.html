@@ -7,11 +7,35 @@
     <meta name="apple-mobile-web-app-capable" content="YES">
     <link rel="apple-touch-icon" href="Images/WebClipIcon.png">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="../Parts/ActivityIndicator.css">
     <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>
     <script type="text/javascript" src="main.js" charset="utf-8"></script>
 </head>
 <body onload="load();">
-    <div id="content"></div>
+    <div id="content">
+        <div id="button"></div>
+        <img id="activityIndicator" src="../Images/ActivityIndicator.png" style="-webkit-animation: none 1s linear infinite; ">
+        <div id="button1"></div>
+        <div id="radioButton">
+            <input type="radio" name="Radio" checked="checked" id="input">
+            <div id="div">Radio</div>
+        </div>
+        <div id="mailButton"></div>
+        <select id="popup" apple-style-relative="height: 20px;">
+            <option id="option">Item 1</option>
+            <option id="option1">Item 2</option>
+            <option id="option2">Item 3</option>
+        </select>
+        <div id="callButton"></div>
+        <input id="search" type="search" value="" placeholder="" results="10" incremental="incremental">
+        <div id="mapButton"></div>
+        <div id="button2"></div>
+        <div id="gauge"></div>
+        <div id="levelIndicator1"></div>
+        <div id="div1"></div>
+        <div id="levelIndicator"></div>
+        <div id="backButton"></div>
+    </div>
     <div id="footer"></div>
 </body>
 </html>
