@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <content collectionGUID="A360879B-7995-4870-990F-82F50FB71C27">
-  <lastEdited clientType="local-build-20241018" date="2024-10-18 20:00:12 +0000"/>
+  <lastEdited clientType="local-build-20241018" date="2024-10-18 20:00:13 +0000"/>
   <textBox id="generic-header-attribute" dynamic="no" visible="yes">
     <richText>&lt;b&gt;Mein Blog&lt;/b&gt;</richText>
   </textBox>
@@ -13,5 +13,5 @@
   <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
     <richText>&lt;b&gt;Freitag, 18. Oktober 2024&lt;/b&gt;</richText>
   </textBox>
-  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="18_Eintrag_1_files/shapeimage_2.png" left="0px" top="0px" width="400px" height="300px"/>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="18_Eintrag_6_files/shapeimage_2.png" left="0px" top="0px" width="400px" height="300px"/>
 </content>
