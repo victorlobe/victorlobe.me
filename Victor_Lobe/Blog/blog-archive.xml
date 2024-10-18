@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<rss xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>Blog</title>
+    <link>http://www.victorlobe.me/Victor_Lobe/Blog</link>
+    <description>Donec arcu risus diam amet sit. Congue tortor cursus risus vestibulum commodo nisl, luctus augue amet quis aenean maecenas sit, donec velit iusto, morbi felis elit et nibh. Vestibulum volutpat dui lacus consectetuer, mauris at suspendisse sit.</description>
+    <item>
+      <title>Ein Tag beim Longboarden</title>
+      <link>http://www.victorlobe.me/Victor_Lobe/Blog/Eintrage/2024/10/18_Eintrag_5.html</link>
+      <guid isPermaLink="false">21d20192-a7ee-4a69-9941-e202947ec2f4</guid>
+      <pubDate>Fri, 18 Oct 2024 18:41:08 +0200</pubDate>
+      <iweb:comment enabled="0" count="0" link="http://www.victorlobe.me/Victor_Lobe/Blog/Eintrage/2024/10/18_Eintrag_5.html#comment_layer"></iweb:comment>
+    </item>
+    <item>
+      <title>Ein Tag beim Longboarden</title>
+      <link>http://www.victorlobe.me/Victor_Lobe/Blog/Eintrage/2024/10/18_Eintrag_4.html</link>
+      <guid isPermaLink="false">05284a7f-ceba-4eab-bf59-2a3a8b03dd32</guid>
+      <pubDate>Fri, 18 Oct 2024 18:41:08 +0200</pubDate>
+      <iweb:comment enabled="0" count="0" link="http://www.victorlobe.me/Victor_Lobe/Blog/Eintrage/2024/10/18_Eintrag_4.html#comment_layer"></iweb:comment>
+    </item>
+    <item>
+      <title>Ein Tag beim Longboarden</title>
+      <link>http://www.victorlobe.me/Victor_Lobe/Blog/Eintrage/2024/10/18_Eintrag_3.html</link>
+      <guid isPermaLink="false">163f3fdb-131a-4c36-83bc-628969eb82f0</guid>
+      <pubDate>Fri, 18 Oct 2024 18:41:07 +0200</pubDate>
+      <iweb:comment enabled="0" count="0" link="http://www.victorlobe.me/Victor_Lobe/Blog/Eintrage/2024/10/18_Eintrag_3.html#comment_layer"></iweb:comment>
+    </item>
+    <item>
+      <title>Ein Tag beim Longboarden</title>
+      <link>http://www.victorlobe.me/Victor_Lobe/Blog/Eintrage/2024/10/18_Eintrag_2.html</link>
+      <guid isPermaLink="false">88894cae-2e54-4f9c-b26b-52180feeba92</guid>
+      <pubDate>Fri, 18 Oct 2024 18:41:07 +0200</pubDate>
+      <iweb:comment enabled="0" count="0" link="http://www.victorlobe.me/Victor_Lobe/Blog/Eintrage/2024/10/18_Eintrag_2.html#comment_layer"></iweb:comment>
+    </item>
+    <item>
+      <title>Ein Tag beim Longboarden</title>
+      <link>http://www.victorlobe.me/Victor_Lobe/Blog/Eintrage/2024/10/18_Eintrag_1.html</link>
+      <guid isPermaLink="false">ed68d107-d25e-4414-9e51-d1867721ef0f</guid>
+      <pubDate>Fri, 18 Oct 2024 18:41:06 +0200</pubDate>
+      <iweb:comment enabled="0" count="0" link="http://www.victorlobe.me/Victor_Lobe/Blog/Eintrage/2024/10/18_Eintrag_1.html#comment_layer"></iweb:comment>
+    </item>
+    <item>
+      <title>Ein Tag beim Longboarden</title>
+      <link>http://www.victorlobe.me/Victor_Lobe/Blog/Eintrage/2024/10/18_Ein_Tag_beim_Longboarden.html</link>
+      <guid isPermaLink="false">59cca470-3dff-46b7-b274-4f4c784fb5ca</guid>
+      <pubDate>Fri, 18 Oct 2024 18:40:47 +0200</pubDate>
+      <iweb:comment enabled="0" count="0" link="http://www.victorlobe.me/Victor_Lobe/Blog/Eintrage/2024/10/18_Ein_Tag_beim_Longboarden.html#comment_layer"></iweb:comment>
+    </item>
+    <iweb:dateFormat>EEEE, d. MMMM y</iweb:dateFormat>
+    <iweb:baseURL>http://www.victorlobe.me/Victor_Lobe/Blog</iweb:baseURL>
+    <iweb:maximumSummaryItems>5</iweb:maximumSummaryItems>
+  </channel>
+</rss>
