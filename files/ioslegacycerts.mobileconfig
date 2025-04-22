@@ -543,6 +543,48 @@
 		</dict>
 		<dict>
 			<key>PayloadCertificateFileName</key>
+			<string>GeoTrustPCA.crt</string>
+			<key>PayloadContent</key>
+			<data>
+			MIIDfDCCAmSgAwIBAgIQGKy1av1pthU6Y2yv2vrEoTANBgkqhkiG
+			9w0BAQUFADBYMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNR2VvVHJ1
+			c3QgSW5jLjExMC8GA1UEAxMoR2VvVHJ1c3QgUHJpbWFyeSBDZXJ0
+			aWZpY2F0aW9uIEF1dGhvcml0eTAeFw0wNjExMjcwMDAwMDBaFw0z
+			NjA3MTYyMzU5NTlaMFgxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1H
+			ZW9UcnVzdCBJbmMuMTEwLwYDVQQDEyhHZW9UcnVzdCBQcmltYXJ5
+			IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MIIBIjANBgkqhkiG9w0B
+			AQEFAAOCAQ8AMIIBCgKCAQEAvrgVe//UfH1nrYNke8hCUy3f9oQI
+			IGHWAVlqnEQRr+92/ZV+zmEwu3qDXwK9AWbK7hWNb6EwnL2hhZ6U
+			OvNWiAAxz9juapYC2e0DjPt1befquFUWBRaa9OBesYjAZIVcFU2I
+			x7e64HXprQU9nceJSOC7KMgD4TCTZF5SwFlwIjVXiIrxlQqD17wx
+			cwE07e9GceBrAqg1cmuXm2bgyxx5X9gaBGgeRwLmnWDiNpcB3841
+			kt++Z8dtd1k7j53WkBWUvEI0EME5+bEnPn7WinXFsq+W06Lem+SY
+			vn3h6YGttm/81w7a4DSwDRp35+MImO9Y+pyEtzavwt+s0vQQBnBx
+			NQIDAQABo0IwQDAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQE
+			AwIBBjAdBgNVHQ4EFgQULNVQQZcVi/CPNmFbSvtr2ZnJM5IwDQYJ
+			KoZIhvcNAQEFBQADggEBAFpwfyzdtzRP9YZRqSa+S7iq8XEN3GHH
+			oOo0Hnp3DwQ16CePbJC/kRYkRj5KTs4rFtULUh38H2eiAkUxT87z
+			+gOneZ1TatnaYzr4gNfTmeGl4b7UVXGYNTq+k+qurUKykG/g/CFN
+			NWMziUnWm07Kx+dOCQD32sfvmWKZd7aVIl6KoKv0uHiYyjgZmcly
+			nnjNS6yvGaBzEi38wkG6gZHaFloxt/m0cYASSJlyc1pZU8FjUjPt
+			p8nSOQJw+uCxQmYpqptR7TBUIhRf2asdweSU8Pj1K/fqynhG1riR
+			/aYNKxoUAT6A8EKglQdebc3MS6RFjasS6LPeWuWgfOgPIh1a6Vk=
+			</data>
+			<key>PayloadDescription</key>
+			<string>CA-Stammzertifikat hinzufügen</string>
+			<key>PayloadDisplayName</key>
+			<string>GeoTrust Primary Certification Authority</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.security.root.84393A0F-57A8-46B7-AC36-DDE4A597D0CC</string>
+			<key>PayloadType</key>
+			<string>com.apple.security.root</string>
+			<key>PayloadUUID</key>
+			<string>84393A0F-57A8-46B7-AC36-DDE4A597D0CC</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>PayloadCertificateFileName</key>
 			<string>Root-R5.crt</string>
 			<key>PayloadContent</key>
 			<data>
@@ -881,6 +923,43 @@
 		</dict>
 		<dict>
 			<key>PayloadCertificateFileName</key>
+			<string>GeoTrustPCA-G2.crt</string>
+			<key>PayloadContent</key>
+			<data>
+			MIICrjCCAjWgAwIBAgIQPLL0SAoA4v7rJDteYD7DazAKBggqhkjO
+			PQQDAzCBmDELMAkGA1UEBhMCVVMxFjAUBgNVBAoTDUdlb1RydXN0
+			IEluYy4xOTA3BgNVBAsTMChjKSAyMDA3IEdlb1RydXN0IEluYy4g
+			LSBGb3IgYXV0aG9yaXplZCB1c2Ugb25seTE2MDQGA1UEAxMtR2Vv
+			VHJ1c3QgUHJpbWFyeSBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eSAt
+			IEcyMB4XDTA3MTEwNTAwMDAwMFoXDTM4MDExODIzNTk1OVowgZgx
+			CzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1HZW9UcnVzdCBJbmMuMTkw
+			NwYDVQQLEzAoYykgMjAwNyBHZW9UcnVzdCBJbmMuIC0gRm9yIGF1
+			dGhvcml6ZWQgdXNlIG9ubHkxNjA0BgNVBAMTLUdlb1RydXN0IFBy
+			aW1hcnkgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkgLSBHMjB2MBAG
+			ByqGSM49AgEGBSuBBAAiA2IABBWx6P0DFUPlrOuHNxFi79KDNlJ9
+			RVcLSo17VDs6bl8VAsBQps8lL33KSLjHUGMcKiEIfJo22Av+0SbF
+			WDEwKCXzXV2juLaltJLtbCyf691DiaI8S0iRHVDsJt/WYC69IaNC
+			MEAwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYwHQYD
+			VR0OBBYEFBVfNVdRVfslsq0DafwBo/q+EVXVMAoGCCqGSM49BAMD
+			A2cAMGQCMGSWWaboCd6LuvpaiIjwH5HTRqjySkwCY/tsXzjbLkGT
+			qQ7mndwxHLKgpxgceeHHNgIwOlavmnRs9vuD4DPTCF+hnMJbn0bW
+			tsuRBmOiBuczrD6ogRLQy7rQkgu2npaqBA+K
+			</data>
+			<key>PayloadDescription</key>
+			<string>CA-Stammzertifikat hinzufügen</string>
+			<key>PayloadDisplayName</key>
+			<string>GeoTrust Primary Certification Authority - G2</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.security.root.E3901A99-96E7-4DA2-B6B5-E7F53A925157</string>
+			<key>PayloadType</key>
+			<string>com.apple.security.root</string>
+			<key>PayloadUUID</key>
+			<string>E3901A99-96E7-4DA2-B6B5-E7F53A925157</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>PayloadCertificateFileName</key>
 			<string>AppleRootCA-G2.cer</string>
 			<key>PayloadContent</key>
 			<data>
@@ -932,6 +1011,52 @@
 			<string>com.apple.security.root</string>
 			<key>PayloadUUID</key>
 			<string>D3E59589-FA19-496B-995E-0F2634373C99</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>PayloadCertificateFileName</key>
+			<string>GeoTrustPCA-G3.crt</string>
+			<key>PayloadContent</key>
+			<data>
+			MIID/jCCAuagAwIBAgIQFaxulBmyeUtB9iepwxgPHzANBgkqhkiG
+			9w0BAQsFADCBmDELMAkGA1UEBhMCVVMxFjAUBgNVBAoTDUdlb1Ry
+			dXN0IEluYy4xOTA3BgNVBAsTMChjKSAyMDA4IEdlb1RydXN0IElu
+			Yy4gLSBGb3IgYXV0aG9yaXplZCB1c2Ugb25seTE2MDQGA1UEAxMt
+			R2VvVHJ1c3QgUHJpbWFyeSBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0
+			eSAtIEczMB4XDTA4MDQwMjAwMDAwMFoXDTM3MTIwMTIzNTk1OVow
+			gZgxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1HZW9UcnVzdCBJbmMu
+			MTkwNwYDVQQLEzAoYykgMjAwOCBHZW9UcnVzdCBJbmMuIC0gRm9y
+			IGF1dGhvcml6ZWQgdXNlIG9ubHkxNjA0BgNVBAMTLUdlb1RydXN0
+			IFByaW1hcnkgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkgLSBHMzCC
+			ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANziXmJYHTNX
+			OTIz+uvLh4yn1ErdBojqZI4xmKU4kB6Yzy5jK/BGvESyiaHAKAxJ
+			cCGVn2TAppMSAmUmhsalifD614SgcK9PGpc/BkTVyetyEH3kMSj7
+			HGHmKAdEc5IiaacDiGydY8hS2pgn5whMcD60yRLBxWeDXTPzAxHs
+			atBT4tG6NmCUgLthY2xbF37fQJQeqw3CIShwiP/WJmxsYAQlTlV+
+			fe+/lEjetx3dcI0FX4ilm/LC7urRQEFtYjgdVgbFA0dRIBn8exAL
+			DmKudlW/X3e+PkkBUz2YJQN2JFodtNuJ6nnltrM7P7pMKEF/Bqxq
+			jsHQ9gUdfeZChuOl1UcCAwEAAaNCMEAwDwYDVR0TAQH/BAUwAwEB
+			/zAOBgNVHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFMR5yo6hTgMdHNxr
+			2zFblD4/MH8tMA0GCSqGSIb3DQEBCwUAA4IBAQAtxRPPVoB7eni9
+			n64smefv2t+UXglpp+duaIy9cr5HqQ6XErhK8WTTOd8lNNTBzU6B
+			8A8ExCSzNJbGpqow32hhc9f5joWJ7w5elShKKiePEI4ufIbEAp7a
+			DHdlDkQNkv39sxY2+hENHYwOB4lqKVb3cvTdFZx3NWZXqxNT2I7B
+			QMXXExZacse3aQHEerGDAWh9jUGhlBjBJVz88P6DAod8DQ3PLghc
+			SkANPuyBYeYk28rgDi0Hsj5W3I31QYUHSJsMC8tJP33st/3LjWeJ
+			Gqvtux6jAAgIFyqCXDFdRootD4abdNlF+9RAsXqqaC2Gspki4cEr
+			x5z481+oghLrGREt
+			</data>
+			<key>PayloadDescription</key>
+			<string>CA-Stammzertifikat hinzufügen</string>
+			<key>PayloadDisplayName</key>
+			<string>GeoTrust Primary Certification Authority - G3</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.security.root.3376A569-0E46-4366-96A6-BAF6C38AE9C8</string>
+			<key>PayloadType</key>
+			<string>com.apple.security.root</string>
+			<key>PayloadUUID</key>
+			<string>3376A569-0E46-4366-96A6-BAF6C38AE9C8</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
@@ -1065,7 +1190,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>3BF6EBDB-1626-4377-BCC3-5C863E743C45</string>
+	<string>DD2CDDDE-F525-4A50-8320-40AEBC5DB7F1</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
