@@ -2,37 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  <id>urn:iweb:345C349C-6DAC-4B28-BB92-2854B4F1D3F8</id>
  <title>Page list Atom feed</title>
- <updated>2024-10-18T22:00:11+02:00</updated>
+ <updated>2025-05-25T04:21:28+02:00</updated>
  <link rel="self" href="feed.xml"/>
  <generator>iWeb</generator>
  <author>
   <name>iWeb</name>
  </author>
  <entry>
-  <id>urn:iweb:68F98D32-CF84-4681-8B95-DD5508A3EB57</id>
-  <title>Willkommen</title>
-  <title xmlns="urn:iweb:">Willkommen</title>
-  <in-navbar xmlns="urn:iweb:">68F98D32-CF84-4681-8B95-DD5508A3EB57</in-navbar>
-  <link rel="alternate" href="Willkommen.html"/>
-  <updated>2024-10-18T22:00:11.001+02:00</updated>
-  <content>Willkommen</content>
- </entry>
- <entry>
-  <id>urn:iweb:CB75F2A9-21A3-4F12-8775-57354194D05B</id>
-  <title>Über mich</title>
-  <title xmlns="urn:iweb:">Über mich</title>
-  <in-navbar xmlns="urn:iweb:">CB75F2A9-21A3-4F12-8775-57354194D05B</in-navbar>
-  <link rel="alternate" href="Uber_mich.html"/>
-  <updated>2024-10-18T22:00:11.002+02:00</updated>
-  <content>Über mich</content>
- </entry>
- <entry>
-  <id>urn:iweb:13FC27B2-3B2E-404E-98DC-7795A9DCED52</id>
-  <title>Blog</title>
-  <title xmlns="urn:iweb:">Blog</title>
-  <in-navbar xmlns="urn:iweb:">13FC27B2-3B2E-404E-98DC-7795A9DCED52</in-navbar>
-  <link rel="alternate" href="Blog/Blog.html"/>
-  <updated>2007-01-23T18:29:52+01:00</updated>
-  <content>Blog</content>
+  <id>urn:iweb:13D99198-9510-41E7-BD2A-1494D8FA37D2</id>
+  <title>Home</title>
+  <title xmlns="urn:iweb:">Home</title>
+  <in-navbar xmlns="urn:iweb:">13D99198-9510-41E7-BD2A-1494D8FA37D2</in-navbar>
+  <link rel="alternate" href="Home.html"/>
+  <updated>2025-05-25T04:21:28.001+02:00</updated>
+  <content>Home</content>
  </entry>
 </feed>
