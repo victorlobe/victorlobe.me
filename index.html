@@ -13,6 +13,17 @@
                     border-radius: 30%;
                     object-fit: cover;
                     margin-right: 8px;
+                    vertical-align: middle;
+                }
+                
+                .link-content {
+                    text-align: center;
+                    line-height: 1.3;
+                    padding: 8px 0;
+                }
+                
+                fieldset a {
+                    min-height: 36px;
                 }
             </style>
             <meta name="viewport" content="initial-scale=1.0,width=device-width">
@@ -30,14 +41,14 @@
             <fieldset style="background-color: rgb(255, 255, 255)">
                 <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://repo.victorlobe.me">
                     <div>
-                        <div style="display: flex; align-items: center; justify-content: center;">
+                        <div class="link-content">
                             <img src="CydiaIcon.png" class="app-icon"> Cydia Repository
                         </div>
                     </div>
                 </a>
                 <a href="https://bahnfinder.app">
                     <div>
-                        <div style="display: flex; align-items: center; justify-content: center;">
+                        <div class="link-content">
                             <img src="BahnfinderIcon.png" class="app-icon"> Bahnfinder
                         </div>
                     </div>
