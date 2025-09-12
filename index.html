@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <title>Victor Lobe</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+  <style>
+    @import url(https://cydia.saurik.com/cytyle/style-3163da6b7950852a03d31ea77735f4e1d2ba6699.css);
+    
+    .button-container {
+      text-align: center;
+      margin-top: 2em;
+    }
+    
+    .custom-button {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 8px;
+      background-color: #007AFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .custom-button:hover {
+      background-color: #0056CC;
+    }
+    
+    .custom-button.secondary {
+      background-color: #34C759;
+    }
+    
+    .custom-button.secondary:hover {
+      background-color: #28A745;
+    }
+  </style>
 </head>
-<body>
-  <h1>🚧 Under construction 🚧</h1>
+<body class="pinstripe">
+<panel>
+  <fieldset style="text-align: center; border: none; background: none; padding-top: 2em;">
+    <img src="/favicon.png" width="80" height="80" alt="Victor Lobe" style="border-radius: 16px; box-shadow: 0 0 12px rgba(0,0,0,0.3); margin-bottom: 1em;"><br>
+    <strong style="font-size: 2em; color: #333;">Open</strong>
+    <div class="button-container">
+      <a href="#" class="custom-button">Button 1</a>
+      <a href="#" class="custom-button secondary">Button 2</a>
+    </div>
+  </fieldset>
+</panel>
 </body>
 </html>
