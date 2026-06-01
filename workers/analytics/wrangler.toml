@@ -1,0 +1,15 @@
+name = "victorlobe-home-analytics"
+main = "index.js"
+compatibility_date = "2026-06-01"
+
+[vars]
+ALLOWED_ORIGINS = "https://victorlobe.me"
+
+[[d1_databases]]
+binding = "HOME_ANALYTICS_DB"
+database_name = "victorlobe-home-analytics"
+database_id = "256eef36-b597-4016-94f9-95b79c77ab9d"
+
+[[routes]]
+pattern = "victorlobe.me/api/track*"
+zone_name = "victorlobe.me"

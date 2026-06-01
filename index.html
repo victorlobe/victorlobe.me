@@ -35,6 +35,123 @@
                 }
             </style>
             <meta name="viewport" content="initial-scale=1.0,width=device-width">
+            <script>
+                (function () {
+                    function getBrowserInfo() {
+                        var ua = navigator.userAgent || '';
+                        var browser = 'Unknown';
+                        var major = '';
+                        var match = null;
+
+                        if ((match = ua.match(/Edg\/(\d+)/))) {
+                            browser = 'Edge';
+                            major = match[1];
+                        } else if ((match = ua.match(/OPR\/(\d+)/))) {
+                            browser = 'Opera';
+                            major = match[1];
+                        } else if ((match = ua.match(/Firefox\/(\d+)/))) {
+                            browser = 'Firefox';
+                            major = match[1];
+                        } else if ((match = ua.match(/CriOS\/(\d+)/))) {
+                            browser = 'Chrome';
+                            major = match[1];
+                        } else if ((match = ua.match(/Chrome\/(\d+)/))) {
+                            browser = 'Chrome';
+                            major = match[1];
+                        } else if ((match = ua.match(/Version\/(\d+).*Safari\//))) {
+                            browser = 'Safari';
+                            major = match[1];
+                        } else if ((match = ua.match(/Safari\/(\d+)/))) {
+                            browser = 'Safari';
+                            major = match[1];
+                        }
+
+                        return { browser: browser, major: major };
+                    }
+
+                    function getOs() {
+                        var ua = navigator.userAgent || '';
+                        var platform = navigator.platform || '';
+                        if (/iPad|iPhone|iPod/.test(ua) || (platform === 'MacIntel' && navigator.maxTouchPoints > 1)) return 'iOS';
+                        if (/Android/.test(ua)) return 'Android';
+                        if (/Windows NT/.test(ua)) return 'Windows';
+                        if (/Mac OS X|Macintosh/.test(ua)) return 'macOS';
+                        if (/Linux/.test(ua)) return 'Linux';
+                        return 'Unknown';
+                    }
+
+                    function getDeviceType(osName) {
+                        var ua = navigator.userAgent || '';
+                        var width = window.innerWidth || 0;
+                        var hasTouch = navigator.maxTouchPoints > 0;
+                        if (/Mobi|iPhone|Android.*Mobile/.test(ua) || width < 740) return 'mobile';
+                        if (/iPad|Tablet/.test(ua) || (osName === 'iOS' && hasTouch) || (hasTouch && width < 1100)) return 'tablet';
+                        return 'desktop';
+                    }
+
+                    function getReferrerDomain() {
+                        try {
+                            if (!document.referrer) return '';
+                            return new URL(document.referrer).hostname.replace(/^www\./, '');
+                        } catch (error) {
+                            return '';
+                        }
+                    }
+
+                    function getUtm() {
+                        var params = new URLSearchParams(window.location.search);
+                        return {
+                            source: params.get('utm_source') || '',
+                            medium: params.get('utm_medium') || '',
+                            campaign: params.get('utm_campaign') || ''
+                        };
+                    }
+
+                    function sendPageView() {
+                        try {
+                            if (window.location.hostname !== 'victorlobe.me') return;
+                            if (navigator.doNotTrack === '1' || navigator.globalPrivacyControl === true) return;
+
+                            var browserInfo = getBrowserInfo();
+                            var osName = getOs();
+                            var payload = {
+                                path: window.location.pathname + window.location.search,
+                                title: document.title || '',
+                                referrer: document.referrer || '',
+                                referrer_domain: getReferrerDomain(),
+                                language: navigator.language || '',
+                                languages: Array.isArray(navigator.languages) ? navigator.languages.slice(0, 6) : [],
+                                browser: browserInfo.browser,
+                                browser_major: browserInfo.major,
+                                os: osName,
+                                device_type: getDeviceType(osName),
+                                surface: 'home',
+                                browser_timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone || ''),
+                                utm: getUtm(),
+                                viewport: {
+                                    width: window.innerWidth || null,
+                                    height: window.innerHeight || null
+                                }
+                            };
+                            var body = JSON.stringify(payload);
+
+                            if (navigator.sendBeacon) {
+                                var blob = new Blob([body], { type: 'application/json' });
+                                if (navigator.sendBeacon('/api/track', blob)) return;
+                            }
+
+                            fetch('/api/track', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: body,
+                                keepalive: true
+                            }).catch(function () {});
+                        } catch (error) {}
+                    }
+
+                    window.addEventListener('DOMContentLoaded', sendPageView);
+                })();
+            </script>
 </head>
     <body class="pinstripe">
         <panel>
