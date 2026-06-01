@@ -137,10 +137,10 @@
 
                             if (navigator.sendBeacon) {
                                 var blob = new Blob([body], { type: 'application/json' });
-                                if (navigator.sendBeacon('/api/track', blob)) return;
+                                if (navigator.sendBeacon('https://www.victorlobe.me/api/track', blob)) return;
                             }
 
-                            fetch('/api/track', {
+                            fetch('https://www.victorlobe.me/api/track', {
                                 method: 'POST',
                                 headers: { 'Content-Type': 'application/json' },
                                 body: body,

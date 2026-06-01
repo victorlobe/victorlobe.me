@@ -34,11 +34,11 @@ npx wrangler deploy
 ## Daten abrufen
 
 ```bash
-curl -H "Authorization: Bearer <TOKEN>" "https://victorlobe.me/api/track?limit=100"
+curl -H "Authorization: Bearer <TOKEN>" "https://www.victorlobe.me/api/track?limit=100"
 ```
 
 Optional nach Land:
 
 ```bash
-curl -H "Authorization: Bearer <TOKEN>" "https://victorlobe.me/api/track?country=DE&limit=100"
+curl -H "Authorization: Bearer <TOKEN>" "https://www.victorlobe.me/api/track?country=DE&limit=100"
 ```

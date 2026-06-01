@@ -1,4 +1,4 @@
-const DEFAULT_ALLOWED_ORIGINS = "https://victorlobe.me";
+const DEFAULT_ALLOWED_ORIGINS = "https://victorlobe.me,https://www.victorlobe.me";
 const DEFAULT_MAX_LIMIT = 500;
 const MAX_TEXT_LENGTH = 500;
 
