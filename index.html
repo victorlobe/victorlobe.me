@@ -135,11 +135,6 @@
                             };
                             var body = JSON.stringify(payload);
 
-                            if (navigator.sendBeacon) {
-                                var blob = new Blob([body], { type: 'application/json' });
-                                if (navigator.sendBeacon('https://www.victorlobe.me/api/track', blob)) return;
-                            }
-
                             fetch('https://www.victorlobe.me/api/track', {
                                 method: 'POST',
                                 headers: { 'Content-Type': 'application/json' },
