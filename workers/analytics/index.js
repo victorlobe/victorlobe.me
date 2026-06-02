@@ -16,7 +16,7 @@ function getCorsHeaders(request, env) {
 
   return {
     "Access-Control-Allow-Origin": allowedOrigin,
-    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Allow-Methods": "GET, POST, DELETE, OPTIONS",
     "Access-Control-Allow-Headers": "Authorization, Content-Type",
     "Cache-Control": "no-store",
     "X-Robots-Tag": "noindex, follow, noarchive",
@@ -47,6 +47,21 @@ function parsePositiveInteger(value, fallback, max) {
   const parsed = Number.parseInt(String(value || ""), 10);
   if (!Number.isFinite(parsed) || parsed < 1) return fallback;
   return Math.min(parsed, max);
+}
+
+function getIntegerList(value, max = 200) {
+  if (!Array.isArray(value)) return [];
+  return Array.from(new Set(value
+    .map((item) => Number.parseInt(String(item), 10))
+    .filter((item) => Number.isInteger(item) && item > 0)))
+    .slice(0, max);
+}
+
+async function deleteRowsByIds(db, tableName, ids) {
+  if (!ids.length) return 0;
+  const placeholders = ids.map(() => "?").join(", ");
+  const result = await db.prepare(`DELETE FROM ${tableName} WHERE id IN (${placeholders})`).bind(...ids).run();
+  return result.meta?.changes || 0;
 }
 
 function isSameSecret(a, b) {
@@ -225,6 +240,38 @@ async function listPageViews(request, env) {
   });
 }
 
+async function deleteAnalyticsEntries(request, env) {
+  if (!env.HOME_ANALYTICS_DB) {
+    return json(request, env, { success: false, error: "Missing HOME_ANALYTICS_DB binding" }, 500);
+  }
+
+  if (!isAuthorized(request, env)) {
+    return json(request, env, { success: false, error: "Unauthorized" }, 401);
+  }
+
+  let payload;
+  try {
+    payload = await request.json();
+  } catch (error) {
+    return json(request, env, { success: false, error: "Invalid JSON" }, 400);
+  }
+
+  const pageViewIds = getIntegerList(payload?.page_view_ids || payload?.pageViewIds);
+  if (!pageViewIds.length) {
+    return json(request, env, { success: false, error: "No entries selected" }, 400);
+  }
+
+  const deletedPageViews = await deleteRowsByIds(env.HOME_ANALYTICS_DB, "page_views", pageViewIds);
+
+  return json(request, env, {
+    success: true,
+    deleted: {
+      pageViews: deletedPageViews,
+      events: 0
+    }
+  });
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -253,6 +300,10 @@ export default {
 
     if (request.method === "GET") {
       return listPageViews(request, env);
+    }
+
+    if (request.method === "DELETE") {
+      return deleteAnalyticsEntries(request, env);
     }
 
     return json(request, env, { success: false, error: "Method not allowed" }, 405);
