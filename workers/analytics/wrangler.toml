@@ -3,7 +3,7 @@ main = "index.js"
 compatibility_date = "2026-06-01"
 
 [vars]
-ALLOWED_ORIGINS = "https://victorlobe.me,https://www.victorlobe.me"
+ALLOWED_ORIGINS = "https://victorlobe.me,https://www.victorlobe.me,http://192.168.50.29:3004"
 
 [[d1_databases]]
 binding = "HOME_ANALYTICS_DB"
