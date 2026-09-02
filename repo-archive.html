@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>Repo Archive</title>
+
+  <!-- Klassisches Cydia-Stylesheet -->
+  <style>
+	@import url(https://cydia.saurik.com/cytyle/style-3163da6b7950852a03d31ea77735f4e1d2ba6699.css);
+	@import url(http://cydia.saurik.com/cytyle/style-3163da6b7950852a03d31ea77735f4e1d2ba6699.css);
+
+	.link-content {
+	  text-align: center;
+	  line-height: 1.4;
+	  padding: 10px 0;
+	}
+	.repo-icon {
+	  width: 80px;
+	  height: 80px;
+	  border-radius: 16px;
+	  margin-bottom: 10px;
+	}
+	.cydia-icon {
+	  width: 22px;
+	  height: 22px;
+	  vertical-align: middle;
+	  margin-right: 8px;
+	  border-radius: 5px;
+	}
+	.package-icon {
+	  width: 29px;
+	  height: 29px;
+	  border-radius: 7px;
+	}
+	.repo-url {
+	  margin: 4px 0 0;
+	  font-weight: 600;
+	  color: #666;
+	  overflow-wrap: anywhere;
+	}
+	.notice-fieldset {
+	  background-color: #fff9d4;
+	}
+	.notice-fieldset p {
+	  font-weight: 600;
+	  margin: 0;
+	}
+	h1 {
+	  font-size: 20px;
+	  margin: 0;
+	  color: #000;
+	}
+  </style>
+
+  <!-- Favicon für Safari/Cydia -->
+  <link id="repo-favicon" rel="icon" type="image/png" href="repo-placeholder-icon.png">
+  <link id="repo-touch-icon" rel="apple-touch-icon" href="repo-placeholder-icon.png">
+
+  <meta name="viewport" content="initial-scale=1.0,width=device-width">
+  <script>
+	function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+	function defaultIcon(){ return 'repo-placeholder-icon.png'; }
+	var repos = {
+	  'cydia-vn': {name:'Cydia.vn', url:'https://repoarchive.cydiavn.victorlobe.me', icon:'cydia-vn-icon.png', description:'Contains all packages from the original Cydia.vn repository.'},
+	  'rejail': {name:'Rejail.ru', url:'https://repoarchive.rejail.victorlobe.me', icon:'rejail-icon.png', description:'Contains all packages from the original Rejail.ru repository.'},
+	  'zodttd': {name:'ZodTTD', url:'http://repoarchive.zodttd.victorlobe.me', icon:'zodttd-icon.png', description:'Contains all packages from the original ZodTTD & MacCity repository.'},
+	  'pwnage': {name:'Pwnage.dev', url:'http://repoarchive.pwnage.victorlobe.me', icon:'pwnage-icon.png', description:'Contains all packages from the original Pwnage.dev repository.'}
+	};
+	function currentRepo(){ return repos[new URLSearchParams(window.location.search).get('repo')]; }
+	function bootstrap(){
+	  var repo = currentRepo();
+	  if (!repo) { window.location.replace('index.html'); return; }
+	  document.title = 'Repo Archive: ' + repo.name;
+	  document.getElementById('repo-favicon').href = repo.icon;
+	  document.getElementById('repo-touch-icon').href = repo.icon;
+	  document.getElementById('repo-icon').src = repo.icon;
+	  document.getElementById('repo-icon').alt = repo.name + ' Icon';
+	  document.getElementById('repo-name').textContent = 'Repo Archive: ' + repo.name;
+	  document.getElementById('repo-description').textContent = repo.description;
+	  document.getElementById('repo-url').textContent = repo.url + '/';
+	  if (repo.notice) {
+		document.getElementById('repo-notice').style.display = '';
+		document.getElementById('repo-notice-box').style.display = '';
+		document.getElementById('repo-notice-text').textContent = repo.notice;
+	  }
+	  document.getElementById('add-to-cydia').href = 'cydia://url/https://cydia.saurik.com/api/share#?source=' + encodeURIComponent(repo.url + '/');
+	}
+	document.addEventListener('DOMContentLoaded', bootstrap);
+  </script>
+</head>
+<body class="pinstripe">
+  <panel>
+
+	<!-- Repo-Header mit Icon & Titel -->
+	<fieldset>
+	  <div class="link-content">
+		<img id="repo-icon" src="repo-placeholder-icon.png" class="repo-icon" alt="Repo Icon"><br>
+		<h1 id="repo-name">Repo Archive</h1>
+		<p id="repo-description" class="package-meta"></p>
+		<p id="repo-url" class="repo-url"></p>
+	  </div>
+	</fieldset>
+
+	<!-- Nur ein Button -->
+	<fieldset style="background-color:#fff">
+	  <a id="add-to-cydia" href="#">
+		<div>
+		  <div class="link-content">
+			<img src="repo-cydia-icon.png" class="cydia-icon" alt="Cydia Icon">
+			Add to Cydia
+		  </div>
+		</div>
+	  </a>
+	</fieldset>
+
+	<label id="repo-notice" style="display:none">Notice</label>
+	<fieldset id="repo-notice-box" class="notice-fieldset" style="display:none">
+	  <p id="repo-notice-text"></p>
+	</fieldset>
+  </panel>
+</body>
+</html>
