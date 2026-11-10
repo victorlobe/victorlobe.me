@@ -61,12 +61,23 @@
 	function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 	function defaultIcon(){ return 'repo-placeholder-icon.png'; }
 	var repos = {
-	  'cydia-vn': {name:'Cydia.vn', url:'https://repoarchive.cydiavn.victorlobe.me', icon:'cydia-vn-icon.png', description:'Contains all packages from the original Cydia.vn repository.'},
-	  'rejail': {name:'Rejail.ru', url:'https://repoarchive.rejail.victorlobe.me', icon:'rejail-icon.png', description:'Contains all packages from the original Rejail.ru repository.'},
+	  'cydia-vn': {name:'Cydia.vn', url:'http://repoarchive.cydiavn.victorlobe.me', icon:'cydia-vn-icon.png', description:'Contains all packages from the original Cydia.vn repository.'},
+	  'rejail': {name:'Rejail.ru', url:'http://repoarchive.rejail.victorlobe.me', icon:'rejail-icon.png', description:'Contains all packages from the original Rejail.ru repository.'},
 	  'zodttd': {name:'ZodTTD', url:'http://repoarchive.zodttd.victorlobe.me', icon:'zodttd-icon.png', description:'Contains all packages from the original ZodTTD & MacCity repository.'},
 	  'pwnage': {name:'Pwnage.dev', url:'http://repoarchive.pwnage.victorlobe.me', icon:'pwnage-icon.png', description:'Contains all packages from the original Pwnage.dev repository.'}
 	};
-	function currentRepo(){ return repos[new URLSearchParams(window.location.search).get('repo')]; }
+	function queryValue(name){
+	  var query = window.location.search.replace(/^\?/, '').split('&');
+	  var i;
+	  for (i = 0; i < query.length; i++) {
+		var pair = query[i].split('=');
+		if (decodeURIComponent(pair[0].replace(/\+/g, ' ')) === name) {
+		  return decodeURIComponent((pair.slice(1).join('=') || '').replace(/\+/g, ' '));
+		}
+	  }
+	  return null;
+	}
+	function currentRepo(){ return repos[queryValue('repo')]; }
 	function bootstrap(){
 	  var repo = currentRepo();
 	  if (!repo) { window.location.replace('index.html'); return; }
